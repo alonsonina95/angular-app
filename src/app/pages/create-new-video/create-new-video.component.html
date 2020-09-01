@@ -1,1 +1,8 @@
-<p>create-new-video works!</p>
+<h1 mat-dialog-title>Upload Videos</h1>
+<div mat-dialog-content>
+  <input style="display:none" #uploader type="file" class="filestyle" data-classButton="btn btn-primary" data-input="false" data-classIcon="icon-plus" data-buttonText="Select Files"  (change)="handleFileInput($event.target.files)">
+  <button id="upload-btn" (click)="uploader.click()"><mat-icon>cloud_upload</mat-icon></button>
+</div>
+<div mat-dialog-actions >
+  <button id="close-btn" mat-button mat-dialog-close>Close</button>
+</div>
